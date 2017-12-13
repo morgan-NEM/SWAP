@@ -13,7 +13,7 @@
     </header>
     <nav class="row" >        
         <div class="col-sm-3"></div>      
-        <a type="button" class="btn btn-default" class="col-sm-1" href="#">Rechercher</a>
+        <a type="button" class="btn btn-default" class="col-sm-1" href="./recherche_avancee.php">Rechercher</a>
         <a type="button" class="btn btn-default" class="col-sm-1" href="#">Catégories</a>
         <a type="button" class="btn btn-default" class="col-sm-1" href="#">Forum</a>             
         <a type="button" class="btn btn-default" class="col-sm-1" href="#">Panier</a>
