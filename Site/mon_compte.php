@@ -5,10 +5,16 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <title>Swapp - Mon compte</title>
 </head>
 <body>
-    <a type="button" class="btn btn-default" href="#"> Prêt ! Feu ! <br />Swappez !</a>
+<div><?php include('banner.php'); ?></div>
+
+<div><?php include('infos_generales.php'); ?></div>
+
+<div><?php include('infos_compte.php'); ?></div>
+
+<div><?php include('footer.php'); ?></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="bootstrap.min.js"></script>

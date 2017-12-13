@@ -17,7 +17,7 @@
         <a type="button" class="btn btn-default" class="col-sm-1" href="#">Catégories</a>
         <a type="button" class="btn btn-default" class="col-sm-1" href="#">Forum</a>             
         <a type="button" class="btn btn-default" class="col-sm-1" href="#">Panier</a>
-        <a type="button" class="btn btn-default" class="col-sm-1" href="#">Connexion</a>
+        <a type="button" class="btn btn-default" class="col-sm-1" href="./mon_compte.php">Connexion</a>
         <div class="col-sm-3"></div>
     </nav>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
