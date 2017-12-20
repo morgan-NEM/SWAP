@@ -27,10 +27,10 @@
             <div class="link-area">
                 <h3>SWAPPIST</h3>
                 <ul>
-                <li><a href="./qui-sommes-nous.php"> Qui sommes-nous</a></li>
-                <li><a href="./valeurs.php"> Nos valeurs</a></li>
-                <li><a href="./jobs.php"> Jobs</a></li>
-                <li><a href="mailto:chose@bidule.fr"> Contact</a></li>
+                <li><a href="#"> Qui sommes-nous</a></li>
+                <li><a href="#"> Nos valeurs</a></li>
+                <li><a href="#"> Jobs</a></li>
+                <li><a href="#"> Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -38,10 +38,10 @@
             <div class="link-area">
                 <h3>PLUS D'INFOS</h3>
                 <ul>
-                <li><a href="./cgv.php"> CGV</a></li>
-                <li><a href="./faq.php"> FAQ</a></li>
-                <li><a href="./confidentialite.php"> Confidentialité</a></li>
-                <li><a href="partenaires.php"> Partenaires</a></li>
+                <li><a href="#"> CGV</a></li>
+                <li><a href="#"> FAQ</a></li>
+                <li><a href="#"> Confidentialité</a></li>
+                <li><a href="#"> Partenaires</a></li>
                 </ul>
             </div>
         </div>
@@ -52,7 +52,7 @@
                 <li><a href="./index.php"> Accueil</a></li>
                 <li><a href="#"> Services-1</a></li>
                 <li><a href="#"> Services-1</a></li>
-                <li><a href="mailto:chose@bidule.fr"> Contact</a></li>
+                <li><a href="#"> Contact</a></li>
                 </ul>
             </div>
         </div>
