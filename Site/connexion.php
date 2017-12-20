@@ -5,16 +5,23 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swapp - Recherche avancée</title>
+    <title>Swapp - Connexion</title>
 </head>
 <body>
 <div><?php include('includes/banner.php'); ?></div>
 
-<h1 class="centrer">Recherche avancée</h1>
+<h1 class="centrer">Connexion</h1>
 
-<div><?php include('includes/zone_recherche.php'); ?></div>
-
-<div><?php include('includes/resultat_recherche.php'); ?></div>
+<form method="post">
+        
+            <p class="centrer"><input type="text" name="identifiant" placeholder="Identifiant"></p>
+            <p class="centrer"><input type="password" name="password" placeholder="Mot de passe"></p>
+            <p class="centrer"><input type="submit"></p>  
+            <p class="centrer"><a href="./register.php">Pas encore inscrit ?</a></p>   
+            
+            
+    
+</form>
 
 
 <div><?php include('includes/footer.php'); ?></div>
