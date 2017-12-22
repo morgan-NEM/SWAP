@@ -1,13 +1,4 @@
-<!-- <!DOCTYPE php>
-<html lang="en"> 
-<head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="footer.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-</head>
-<body> -->
+<body> 
 <section class="index-link">
 <div class="container">
     <div class="row">
