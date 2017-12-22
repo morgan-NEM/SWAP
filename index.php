@@ -31,6 +31,7 @@
             </div>
 </section>            
 <div><?php include('includes/footer.php'); ?></div>
+<div><?php include('cgv.php'); ?></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="bootstrap.min.js"></script>

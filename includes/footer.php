@@ -37,7 +37,7 @@
             <div class="link-area">
                 <h3>PLUS D'INFOS</h3>
                 <ul>
-                <li><a href="#"> CGV</a></li>
+                <li><a href="./cgv.php"> CGV</a></li>
                 <li><a href="#"> FAQ</a></li>
                 <li><a href="#"> Confidentialité</a></li>
                 <li><a href="#"> Partenaires</a></li>
@@ -48,7 +48,7 @@
             <div class="link-area">
                 <h3>PLAN DU SITE</h3>
                 <ul>
-                <li><a href="./index.php"> Accueil</a></li>
+                <li><a href="../index.php"> Accueil</a></li>
                 <li><a href="#"> Services-1</a></li>
                 <li><a href="#"> Services-1</a></li>
                 <li><a href="#"> Contact</a></li>
