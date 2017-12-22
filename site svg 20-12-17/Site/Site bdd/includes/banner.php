@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+<header>
+    <a href="./index.php"><img src="./images/banner.png" alt="Bannière" width=99% ></a>
+    </header>
+    
+        <nav class="container" >        
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <a type="button" class="btn btn-default col-sm-2" href="./recherche_avancee.php">Rechercher</a>
+                <a type="button" class="btn btn-default col-sm-2" href="#">Catégories</a>
+                <a type="button" class="btn btn-default col-sm-2" href="#">Forum</a>             
+                <a type="button" class="btn btn-default col-sm-2" href="#">Panier</a>
+                <a type="button" class="btn btn-default col-sm-2" href="./connexion.php">Connexion</a>
+                <div class="col-sm-1"></div>
+            </div>
+        </nav>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+</body>
+</html>
