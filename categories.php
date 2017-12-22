@@ -4,16 +4,15 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="footer.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swapp - Mon compte</title>
+    <title>Swapp - Catégories</title>
 </head>
 <body>
+
+
 <div><?php include('includes/banner.php'); ?></div>
-
-<div><?php include('includes/infos_generales.php'); ?></div>
-
-<div><?php include('includes/infos_compte.php'); ?></div>
+<h1 class="centrer">Catégories</h1>
+<div><?php include('includes/liste_categories.php'); ?></div>
 
 <div><?php include('includes/footer.php'); ?></div>
 
