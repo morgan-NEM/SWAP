@@ -1,7 +1,7 @@
 <?php
 try
 {
-$db = new PDO('mysql:host=localhost;dbname=swappist', 'root', '');
+$db = new PDO('mysql:host=localhost;dbname=swappist', 'admin', 'admin');
 }
 catch (Exception $e)
 {
