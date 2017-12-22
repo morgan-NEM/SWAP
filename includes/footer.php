@@ -1,4 +1,4 @@
-<!DOCTYPE php>
+<!-- <!DOCTYPE php>
 <html lang="en"> 
 <head>
     <meta charset="utf-8" />
@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 </head>
-<body>
-</footer>
+<body> -->
 <section class="index-link">
 <div class="container">
     <div class="row">
@@ -68,5 +67,3 @@ N'achetez plus, swappez !</p>
     </div>
     </div>
 </section>
-</body>
-</html>
