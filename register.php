@@ -14,7 +14,7 @@
 <body><?php
 if ($id!=0) erreur(ERR_IS_CO);
 
-if (empty($_POST['identifiant'])) // Si on la variable est vide, on peut considérer qu'on est sur la page de formulaire
+if (empty($_POST['pseudo'])) // Si on la variable est vide, on peut considérer qu'on est sur la page de formulaire
 { ?>
 	<h1>Inscription</h1>;
 	<form method="post" action="register.php" enctype="multipart/form-data">
@@ -63,7 +63,6 @@ $avatar_erreur3 = NULL;
  $email = $_POST['email'];
  $facebook = $_POST['facebook'];
  $website = $_POST['website'];
- $localisation = $_POST['localisation'];
  $pass = md5($_POST['password']);
  $confirm = md5($_POST['confirm']);
  
