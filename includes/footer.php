@@ -6,10 +6,10 @@
             <div class="link-area">
                 <h3>Réseaux sociaux :</h3>
                 <P>
-                <a href="https://www.facebook.com/Campus.EPSI.Montpellier/?ref=br_rs"><img id="facebook" src="icons/facebook.png" alt="Facebook" /></a>
-                <a href="https://twitter.com/epsi_ecoles?lang=fr"><img id="twitter" src="icons/twitter.png" alt="Twitter"/></a>
-                <a href="https://www.instagram.com/explore/locations/225139180/gif-sur-yvette/"><img id="instagram" src="icons/instagram.png" alt="Instagram"/></a>
-                <a href="https://www.linkedin.com/in/sylviemalezieux/"><img id="linkedin" src="icons/linkedin.png" alt="linkedin"/></a>    
+                <a href="https://www.facebook.com/Campus.EPSI.Montpellier/?ref=br_rs"><img id="facebook" src="../icons/facebook.png" alt="Facebook" /></a>
+                <a href="https://twitter.com/epsi_ecoles?lang=fr"><img id="twitter" src="../icons/twitter.png" alt="Twitter"/></a>
+                <a href="https://www.instagram.com/explore/locations/225139180/gif-sur-yvette/"><img id="instagram" src="../icons/instagram.png" alt="Instagram"/></a>
+                <a href="https://www.linkedin.com/in/sylviemalezieux/"><img id="linkedin" src="../icons/linkedin.png" alt="linkedin"/></a>    
             </P>
             </div>
         </div>
@@ -28,10 +28,10 @@
             <div class="link-area">
                 <h3>PLUS D'INFOS</h3>
                 <ul>
-                <li><a href="./cgv.php"> CGV</a></li>
-                <li><a href="./faq.php"> FAQ</a></li>
-                <li><a href="./confidentialite.php"> Confidentialité</a></li>
-                <li><a href="partenaires.php"> Partenaires</a></li>
+                <li><a href="../vue/cgv.php"> CGV</a></li>
+                <li><a href="../vue/faq.php"> FAQ</a></li>
+                <li><a href="../vue/confidentialite.php"> Confidentialité</a></li>
+                <li><a href="../vue/partenaires.php"> Partenaires</a></li>
                 </ul>
             </div>
         </div>
@@ -39,7 +39,7 @@
             <div class="link-area">
                 <h3>PLAN DU SITE</h3>
                 <ul>
-                <li><a href="../index.php"> Accueil</a></li>
+                <li><a href="../vue/index.php"> Accueil</a></li>
                 <li><a href="#"> Services-1</a></li>
                 <li><a href="#"> Services-1</a></li>
                 <li><a href="mailto:chose@bidule.fr"> Contact</a></li>
