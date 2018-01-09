@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="includes/styles/style.css">
-    <link rel="stylesheet" href="includes/styles/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="includes/styles/footer.css">
+    <link rel="stylesheet" type="text/css" href="../includes/styles/style.css">
+    <link rel="stylesheet" href="../includes/styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../includes/styles/footer.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swapp - Connexion</title>
 </head>
 <body>
 <?php $id=(isset($_SESSION['id']))?(int) $_SESSION['id']:0;?>
-<div><?php include ('includes/banner.php');
-           include ('includes/connexion_bdd.php');
-           include ('includes/constants.php'); ?> </div>
+<div><?php include ('../includes/banner.php');
+           include ('../includes/connexion_bdd.php');
+           include ('../includes/constants.php'); ?> </div>
 
 <h1 class="centrer">Connexion</h1>
 <?php if ($id != 0) {
@@ -79,7 +79,7 @@ if (isset($_POST['souvenir'])) {
     setcookie('pseudo', $_SESSION['pseudo'], $expire);
 }
 ?>
-<div><?php include ("includes/footer.php");?></div>
+<div><?php include ("../includes/footer.php");?></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="bootstrap.min.js"></script>
