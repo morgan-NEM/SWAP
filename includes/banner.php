@@ -1,15 +1,15 @@
 <body>
 <header>
-    <a href="./index.php"><img src="./images/banner.jpg" alt="Bannière" width=99% ></a>
+    <a href="/SWAP/index.php"><img src="/SWAP/images/banner.jpg" alt="Bannière" width=99% ></a>
     </header>
     
         <nav class="container" >        
             <div class="row">
                 <div class="col-sm-2"></div>
-                <a type="button" class="btn btn-default col-sm-2" href="./recherche_avancee.php">Rechercher</a>
-                <a type="button" class="btn btn-default col-sm-2" href="./categories.php">Catégories</a>
-                <a type="button" class="btn btn-default col-sm-2" href="#">Forum</a>  
-                <a type="button" class="btn btn-default col-sm-2" href="./connexion.php">Connexion</a>
+                <a type="button" class="btn btn-default col-sm-2" href="/SWAP/recherche_avancee.php">Rechercher</a>
+                <a type="button" class="btn btn-default col-sm-2" href="/SWAP/categories.php">Catégories</a>
+                <a type="button" class="btn btn-default col-sm-2" href="/SWAP/forum/index.php">Forum</a>  
+                <a type="button" class="btn btn-default col-sm-2" href="/SWAP/connexion.php">Connexion</a>
                 <div class="col-sm-2"></div>
             </div>
         </nav>
