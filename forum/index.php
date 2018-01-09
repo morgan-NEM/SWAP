@@ -2,9 +2,9 @@
 <html lang="en"> 
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="../style.css">
-    <link rel="stylesheet" href="../bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../footer.css">
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../styles/footer.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swapp - Accueil</title>
 </head>
@@ -16,9 +16,9 @@ session_start();
 //On donne ensuite un titre à la page, puis on appelle notre fichier debut.php
 $titre = "Index du forum";
 include("../includes/banner.php");
-include("includes/identifiants.php");
-include("includes/debut.php");
-include("includes/menu.php");
+include("../includes/identifiants.php");
+include("../includes/debut.php");
+include("../includes/menu.php");
 ?>
 <h1>Forum des Swappeurs!</h1>
 

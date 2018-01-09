@@ -1,6 +1,6 @@
 <body>
 <header>
-    <a href="/SWAP/index.php"><img src="/SWAP/images/banner.jpg" alt="Bannière" width=99% ></a>
+    <a href="index.php"><img src="../images/banner.jpg" alt="Bannière" width=99% ></a>
     </header>
     
         <nav class="container" >        
