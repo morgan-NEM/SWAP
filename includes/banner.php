@@ -1,6 +1,6 @@
 <body>
 <header>
-    <a href="index.php"><img src="../images/banner.jpg" alt="Bannière" width=99% ></a>
+    <a href="../vue/index.php"><img src="../images/banner.jpg" alt="Bannière" width=99% ></a>
     </header>
     
         <nav class="container" >        

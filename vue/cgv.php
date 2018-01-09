@@ -20,7 +20,7 @@
 
 <body>
 
-<div><?php include('includes/banner.php'); ?></div>
+<div><?php include('../includes/banner.php'); ?></div>
 
 <h1 class="centrer">Conditions générales de vente</h1>
 
@@ -130,7 +130,7 @@
 
         L'Utilisateur, dans le délai imparti, peut obtenir à tout moment sur le site Swappist un état complet des Opérations de Paiement qu'il a réalisées.<br>
 
-<div><?php include('includes/footer.php'); ?></div>
+<div><?php include('../includes/footer.php'); ?></div>
 
 
 

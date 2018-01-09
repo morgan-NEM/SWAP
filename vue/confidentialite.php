@@ -9,7 +9,7 @@
     <title>Swapp - Confidentialité</title>
 </head>
 <body>
-<div><?php include('includes/banner.php'); ?></div>
+<div><?php include('../includes/banner.php'); ?></div>
 <h1 class="centrer">Confidentialité</h1>
 <section>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos tempore officia tenetur cum quis maxime, illo officiis dolorum quasi quia adipisci eos blanditiis commodi libero. Sint ullam cupiditate amet error at perspiciatis quasi animi modi impedit earum voluptas dolor ipsam, quis, reiciendis dignissimos eum aperiam fuga rem voluptatibus quos dicta maxime. Est veniam harum, qui iste nisi vel placeat sequi? Dolore nihil similique quibusdam ratione nemo, sequi molestiae accusamus blanditiis illo explicabo non magnam magni perferendis quis doloremque quisquam quae consequuntur deserunt cum veritatis eveniet impedit. Architecto aperiam nemo esse, culpa amet sunt adipisci illo officiis ipsam non quam quas.</p>
@@ -17,7 +17,7 @@
 </section>
 
 
-<div><?php include('includes/footer.php'); ?></div>
+<div><?php include('../includes/footer.php'); ?></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="bootstrap.min.js"></script>

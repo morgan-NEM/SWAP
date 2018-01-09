@@ -11,11 +11,11 @@
 <body>
 
 
-<div><?php include('includes/banner.php'); ?></div>
+<div><?php include('../includes/banner.php'); ?></div>
 <h1 class="centrer">Catégories</h1>
-<div><?php include('includes/liste_categories.php'); ?></div>
+<div><?php include('../includes/liste_categories.php'); ?></div>
 
-<div><?php include('includes/footer.php'); ?></div>
+<div><?php include('../includes/footer.php'); ?></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="bootstrap.min.js"></script>
