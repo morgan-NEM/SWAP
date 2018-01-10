@@ -16,9 +16,10 @@ session_start()
 <?php
 $titre = "Poster";
 $balises = true;
-include "includes/identifiants.php";
-include "includes/debut.php";
-include "includes/menu.php";
+include("../includes/banner.php");
+include("includes/identifiants.php");
+include("includes/debut.php");
+include("includes/menu.php");
 
 //Qu'est ce qu'on veut faire ? poster, répondre ou éditer ?
 $action = (isset($_GET['action'])) ? htmlspecialchars($_GET['action']) : '';
@@ -228,6 +229,7 @@ break;
         echo '<h2>Cette action est impossible</h2>';
 
 } //Fin du switch
+include('../includes/footer.php');
 ?>
 <script type="text/javascript" src="js/script.js"></script>
 </body>

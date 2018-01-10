@@ -12,9 +12,10 @@
 <?php
 session_start();
 $titre = "Voir un sujet";
-include "includes/identifiants.php";
-include "includes/debut.php";
-include "includes/menu.php";
+include("../includes/banner.php");
+include("includes/identifiants.php");
+include("includes/debut.php");
+include("includes/menu.php");
 include("includes/functions_txt.php"); //On verra plus tard ce qu'est ce fichier
 
 //On récupère la valeur de t
@@ -152,7 +153,7 @@ echo '<p>Page : ';
     $query->CloseCursor();
 
 } //Fin du if qui vérifiait si le topic contenait au moins un message
-
+include('../includes/footer.php');
 ?>
 </div>
 </body>

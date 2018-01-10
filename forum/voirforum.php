@@ -14,6 +14,7 @@
 
 <?php
 $titre="Voir un forum";
+include("../includes/banner.php");
 include("includes/identifiants.php");
 include("includes/debut.php");
 include("includes/menu.php");
@@ -204,6 +205,7 @@ else //S'il n'y a pas de message
         echo'<p>Ce forum ne contient aucun sujet actuellement</p>';
 }
 $query->CloseCursor();
+include('../includes/footer.php');
 ?>
 </div>
 </body></html>

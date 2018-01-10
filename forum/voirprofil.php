@@ -15,6 +15,7 @@ session_start();
 <?php
 
 $titre="Profil";
+include("../includes/banner.php");
 include("includes/identifiants.php");
 include("includes/debut.php");
 include("includes/menu.php");
@@ -331,6 +332,7 @@ default; //Si jamais c'est aucun de ceux-là c'est qu'il y a eu un problème :o
 echo'<p>Cette action est impossible</p>';
  
 } //Fin du switch
+include('../includes/footer.php');
 ?>
 </div>
 

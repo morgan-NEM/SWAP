@@ -129,6 +129,7 @@ echo'<p>Le total des messages du forum est <strong>'.$totaldesmessages.'</strong
 echo'Le site et le forum comptent <strong>'.$TotalDesMembres.'</strong> membres.<br />';
 echo'Le dernier membre est <a href="./voirprofil.php?m='.$data['membre_id'].'&amp;action=consulter">'.$derniermembre.'</a>.</p>';
 $query->CloseCursor();
+include('../includes/footer.php');
 ?>
 </div>
 </body>
