@@ -56,7 +56,7 @@
 
     <br><b>E-transactions :</b><br>
 
-            Désigne le service sécurisé de paiement bancaire du <b>Crédit Agricole</b> (sponsorisé par nos amis anonymes, Valérie C. & Morgan F. dont nous tairons les noms.<br>
+            Désigne le service sécurisé de paiement bancaire du <b>Crédit Agricole</b> (sponsorisé par nos amis anonymes, Valérie C. & Morgan F. dont nous tairons les noms).<br>
 
     <br><b>Ticket paiement :</b><br>
 
