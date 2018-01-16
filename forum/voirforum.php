@@ -167,7 +167,7 @@ if ($query->rowCount()>0)
        
         while ($data = $query->fetch())
         {
-                //Ah bah tiens... re vla l'echo de fou
+                
                 echo'<tr><td><img src="./images/message.gif" alt="Message" /></td>
 
                 <td class="titre">

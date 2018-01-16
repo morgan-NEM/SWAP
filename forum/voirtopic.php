@@ -68,7 +68,7 @@ echo '<a href="./poster.php?action=nouveautopic&amp;f=' . $data['forum_id'] . '"
 $query->CloseCursor();
 //Enfin on commence la boucle !
 $query = $db->prepare('SELECT post_id , post_createur , post_texte , post_time ,
-membre_id, membre_pseudo, membre_inscrit, membre_avatar, membre_localisation, membre_post, membre_signature
+membre_id, membre_pseudo, membre_inscrit, membre_avatar, membre_post, membre_signature
 FROM forum_post
 LEFT JOIN forum_membres ON forum_membres.membre_id = forum_post.post_createur
 WHERE topic_id =:topic
@@ -78,16 +78,16 @@ $query->bindValue(':topic', $topic, PDO::PARAM_INT);
 $query->bindValue(':premier', (int) $premierMessageAafficher, PDO::PARAM_INT);
 $query->bindValue(':nombre', (int) $nombreDeMessagesParPage, PDO::PARAM_INT);
 $query->execute();
-
+print_r($query->rowCount());
 //On vérifie que la requête a bien retourné des messages
 if ($query->rowCount() < 1) {
-    echo '<p>Il n y a aucun post sur ce topic, vérifiez l url et reessayez</p>';
+    echo '<p>Il n y a aucun post sur ce topic, vérifiez l\'url et reessayez</p>';
 } else {
-    //Si tout roule on affiche notre tableau puis on remplit avec une boucle
+    //on affiche notre tableau puis on remplit avec une boucle
     ?><table>
         <tr>
-        <th class="vt_auteur"><strong>Auteurs</strong></th>
-        <th class="vt_mess"><strong>Messages</strong></th>
+        <th class="auteur"><strong>Auteurs</strong></th>
+        <th class="mess"><strong>Messages</strong></th>
         </tr>
         <?php
 while ($data = $query->fetch()) {
@@ -121,8 +121,7 @@ while ($data = $query->fetch()) {
         echo '<tr><td>
          <img src="./images/avatars/' . $data['membre_avatar'] . '" alt="" />
          <br />Membre inscrit le ' . date('d/m/Y', $data['membre_inscrit']) . '
-         <br />Messages : ' . $data['membre_post'] . '<br />
-         Localisation : ' . stripslashes(htmlspecialchars($data['membre_localisation'])) . '</td>';
+         <br />Messages : ' . $data['membre_post'] . '<br />';
 
         //Message
         echo '<td>' . code(nl2br(stripslashes(htmlspecialchars($data['post_texte'])))) . '

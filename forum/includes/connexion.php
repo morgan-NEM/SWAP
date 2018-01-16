@@ -62,7 +62,7 @@ else
 	    pendant votre identification.<br /> Le mot de passe ou le pseudo 
             entré n\'est pas correct.</p><p>Cliquez <a href="connexion.php">ici</a> 
 	    pour revenir à la page précédente
-	    <br /><br />Cliquez <a href="\Swappist\forum\index.php">ici</a> 
+	    <br /><br />Cliquez <a href="../index.php">ici</a> 
 	    pour revenir à la page d accueil</p>';
 	}
     $query->CloseCursor();

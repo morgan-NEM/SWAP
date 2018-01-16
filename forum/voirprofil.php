@@ -20,7 +20,11 @@ include("includes/identifiants.php");
 include("includes/debut.php");
 include("includes/menu.php");
 if (isset($id)){
+<<<<<<< Updated upstream
     echo '<p><a href="./voirprofil.php?action=modifier">Modifier mon profil</a></p>';
+=======
+    echo '<p><a href="/SWAP/forum/voirprofil.php?action=modifier">Modifier mon profil</a></p>';
+>>>>>>> Stashed changes
 }
 //On récupère la valeur de nos variables passées par URL
 $action = isset($_GET['action'])?htmlspecialchars($_GET['action']):'consulter';
@@ -33,11 +37,12 @@ switch($action)
        //On récupère les infos du membre
        $query=$db->prepare('SELECT membre_pseudo, membre_avatar,
        membre_email, membre_facebook, membre_signature, membre_siteweb, membre_post,
-       membre_inscrit, membre_localisation
+       membre_inscrit
        FROM forum_membres WHERE membre_id=:membre');
        $query->bindValue(':membre',$membre, PDO::PARAM_INT);
        $query->execute();
        $data=$query->fetch();
+       print_r($membre);
 
        //On affiche les infos sur le membre
        echo '<p><i>Vous êtes ici</i> : <a href="./index.php">Index du forum</a> --> 
@@ -47,7 +52,7 @@ switch($action)
        
        
        
-       echo'<img src="./images/avatars/'.$data['membre_avatar'].'"
+       echo'<img src="../images/avatars/'.$data['membre_avatar'].'"
        alt="Ce membre n a pas d avatar" />';
        
        echo'<p><strong>Adresse E-Mail : </strong>
@@ -64,8 +69,7 @@ switch($action)
        <strong>'.date('d/m/Y',$data['membre_inscrit']).'</strong>
        et a posté <strong>'.$data['membre_post'].'</strong> messages
        <br /><br />';
-       echo'<strong>Localisation : </strong>'.stripslashes(htmlspecialchars($data['membre_localisation'])).'
-       </p>';
+       
        $query->CloseCursor();
        break;
 //Si on choisit de modifier son profil
@@ -77,7 +81,7 @@ case "modifier":
 
         //On prend les infos du membre
         $query=$db->prepare('SELECT membre_pseudo, membre_email,
-        membre_siteweb, membre_signature, membre_facebook, membre_localisation,
+        membre_siteweb, membre_signature, membre_facebook,
         membre_avatar
         FROM forum_membres WHERE membre_id=:id');
         $query->bindValue(':id',$id,PDO::PARAM_INT);
@@ -111,11 +115,6 @@ case "modifier":
         value="'.stripslashes($data['membre_siteweb']).'" /><br />
         </fieldset>
  
-        <fieldset><legend>Informations supplémentaires</legend>
-        <label for="localisation">Localisation :</label>
-        <input type="text" name="localisation" id="localisation"
-        value="'.stripslashes($data['membre_localisation']).'" /><br />
-        </fieldset>
                
         <fieldset><legend>Profil sur le forum</legend>
         <label for="avatar">Changer votre avatar :</label>
@@ -124,7 +123,7 @@ case "modifier":
         <label><input type="checkbox" name="delete" value="Delete" />
         Supprimer l avatar</label>
         Avatar actuel :
-        <img src="./images/avatars/'.$data['membre_avatar'].'"
+        <img src="../images/avatars/'.$data['membre_avatar'].'"
         alt="pas d avatar" />
      
         <br /><br />
@@ -162,7 +161,6 @@ case "modifier":
         $email = $_POST['email'];
         $facebook= $_POST['facebook'];
         $website = $_POST['website'];
-        $localisation = $_POST['localisation'];
         $pass = md5($_POST['password']);
         $confirm = md5($_POST['confirm']);
     
@@ -223,9 +221,9 @@ case "modifier":
         if (!empty($_FILES['avatar']['size']))
         {
             //On définit les variables :
-            $maxsize = 30072; //Poid de l'image
-            $maxwidth = 100; //Largeur de l'image
-            $maxheight = 100; //Longueur de l'image
+            $maxsize = 10000072; //Poid de l'image
+            $maxwidth = 10000; //Largeur de l'image
+            $maxheight = 10000; //Longueur de l'image
             //Liste des extensions valides
             $extensions_valides = array( 'jpg' , 'jpeg' , 'gif' , 'png', 'bmp' );
      
@@ -294,14 +292,13 @@ case "modifier":
      
             $query=$db->prepare('UPDATE forum_membres
             SET  membre_mdp = :mdp, membre_email=:mail, membre_facebook=:facebook, membre_siteweb=:website,
-            membre_signature=:sign, membre_localisation=:loc
+            membre_signature=:sign
             WHERE membre_id=:id');
             $query->bindValue(':mdp',$pass,PDO::PARAM_INT);
             $query->bindValue(':mail',$email,PDO::PARAM_STR);
             $query->bindValue(':facebook',$facebook,PDO::PARAM_STR);
             $query->bindValue(':website',$website,PDO::PARAM_STR);
             $query->bindValue(':sign',$signature,PDO::PARAM_STR);
-            $query->bindValue(':loc',$localisation,PDO::PARAM_STR);
             $query->bindValue(':id',$id,PDO::PARAM_INT);
             $query->execute();
             $query->CloseCursor();
