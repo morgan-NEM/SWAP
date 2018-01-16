@@ -53,7 +53,7 @@ else
 	    $_SESSION['id'] = $data['membre_id'];
 	    $message = '<p>Bienvenue '.$data['membre_pseudo'].', 
 			vous êtes maintenant connecté!</p>
-			<p>Cliquez <a href="\Swappist\forum\index.php">ici</a> 
+			<p>Cliquez <a href="..\index.php">ici</a> 
 			pour revenir à la page d accueil</p>';  
 	}
 	else // Accès pas OK !
