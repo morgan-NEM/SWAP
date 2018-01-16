@@ -20,7 +20,7 @@ include("includes/identifiants.php");
 include("includes/debut.php");
 include("includes/menu.php");
 if (isset($id)){
-    echo '<p><a href="/Swappist/forum/voirprofil.php?action=modifier">Modifier mon profil</a></p>';
+    echo '<p><a href="./voirprofil.php?action=modifier">Modifier mon profil</a></p>';
 }
 //On récupère la valeur de nos variables passées par URL
 $action = isset($_GET['action'])?htmlspecialchars($_GET['action']):'consulter';
