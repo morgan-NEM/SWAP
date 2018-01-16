@@ -120,7 +120,7 @@ $avatar_erreur3 = NULL;
 	
 
 //Vérification de l'avatar :
-    if (!empty($_FILES['avatar']['size']))
+    if (!empty($_FILES['avatar']['size']) && $_FILES['monfichier']['error'] == 0)
     {
         $maxsize = 100240; //Poid de l'image
         $maxwidth = 1000; //Largeur de l'image
@@ -168,9 +168,9 @@ $avatar_erreur3 = NULL;
 	
 		 $query=$db->prepare('INSERT INTO forum_membres (membre_pseudo, membre_mdp, membre_email,             
 		 membre_facebook, membre_siteweb, membre_avatar,
-		 membre_signature, membre_localisation, membre_inscrit,   
+		 membre_signature, membre_inscrit,   
 		 membre_derniere_visite)
-		 VALUES (:pseudo, :pass, :email, :facebook, :website, :nomavatar, :signature, :localisation, :temps, :temps)');
+		 VALUES (:pseudo, :pass, :email, :facebook, :website, :nomavatar, :signature, :temps, :temps)');
 	 $query->execute(array(
 		 "pseudo"=>$pseudo,
 		 "pass"=>$pass,
@@ -179,7 +179,6 @@ $avatar_erreur3 = NULL;
 		 "website"=>$website,
 		 "nomavatar"=>$nomavatar,
 		 "signature"=>$signature,
-		 "localisation"=>$localisation,
 		 "temps"=>$temps,
 		 "temps"=>$temps
 	));
