@@ -11,11 +11,12 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include('../includes/banner.php');
           include('../includes/connexion_bdd.php');
-          include('../includes/constants.php')
+          include('../includes/constants.php');
+          include('../forum/includes/functions.php')
     ?>
 </head>
 <body><?php
-if ($id!=0) erreur(ERR_IS_CO);
+if ($id!=0) erreur(ERR_IS_NOT_CO);
 
 if (empty($_POST['pseudo'])) // Si on la variable est vide, on peut considérer qu'on est sur la page de formulaire
 { ?>
@@ -146,7 +147,6 @@ echo $signature;
      "website"=>$website,
      "nomavatar"=>$nomavatar,
      "signature"=>$signature,
-     "localisation"=>$localisation,
      "temps"=>$temps,
      "temps"=>$temps
 ));
