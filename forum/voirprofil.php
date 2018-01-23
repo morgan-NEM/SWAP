@@ -20,11 +20,7 @@ include("includes/identifiants.php");
 include("includes/debut.php");
 include("includes/menu.php");
 if (isset($id)){
-<<<<<<< Updated upstream
-    echo '<p><a href="./voirprofil.php?action=modifier">Modifier mon profil</a></p>';
-=======
     echo '<p><a href="/SWAP/forum/voirprofil.php?action=modifier">Modifier mon profil</a></p>';
->>>>>>> Stashed changes
 }
 //On récupère la valeur de nos variables passées par URL
 $action = isset($_GET['action'])?htmlspecialchars($_GET['action']):'consulter';
@@ -273,7 +269,7 @@ case "modifier":
                     $query->CloseCursor();
             }
      
-            //Une nouveauté ici : on peut choisis de supprimer l'avatar
+            //Une nouveauté ici : on peut choisir de supprimer l'avatar
             if (isset($_POST['delete']))
             {
                     $query=$db->prepare('UPDATE forum_membres

@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,13 +10,14 @@
     <title>Swapp - Connexion</title>
 </head>
 <body>
-<?php $id=(isset($_SESSION['id']))?(int) $_SESSION['id']:0;?>
 <div><?php include ('../includes/banner.php');
            include ('../includes/connexion_bdd.php');
-           include ('../includes/constants.php'); ?> </div>
+           include ('../forum/includes/constants.php'); ?> </div>
 
 <h1 class="centrer">Connexion</h1>
-<?php if ($id != 0) {
+
+<?php print_r($id);
+if ($id != 0) {
     erreur(ERR_IS_CO);
 }
 

@@ -21,12 +21,13 @@ include("includes/identifiants.php");
 include("includes/debut.php");
 include("includes/menu.php");
 
+
 //Qu'est ce qu'on veut faire ? poster, répondre ou éditer ?
 $action = (isset($_GET['action'])) ? htmlspecialchars($_GET['action']) : '';
 
 //Il faut être connecté pour poster !
 if ($id == 0) {
-    erreur(ERR_IS_CO);
+    erreur(ERR_IS_NOT_CO);
 }
 
 //Si on veut poster un nouveau topic, la variable f se trouve dans l'url,

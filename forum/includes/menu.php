@@ -16,13 +16,5 @@ if(isset($_SESSION["id"]))
 <?php
 echo '</ul>
 </div>       
-<div class="element_menu">
-<h3>Navigation</h3>
-<ul>
-<li>Page 1</li>
-<li>Page 2</li>
-</ul>
-</div>        
-</div>
-<div id="corps_forum">';
+<div class="element_menu">';
 ?>
