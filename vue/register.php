@@ -24,18 +24,67 @@ if (empty($_POST['pseudo'])) // Si on la variable est vide, on peut considérer 
 	<h1 class="centrer">Inscription</h1>
 	<form method="post" action="register.php" enctype="multipart/form-data">
 	<fieldset><legend>Identifiants</legend>
-	<label for="pseudo">* Pseudo :</label>  <input name="pseudo" type="text" id="pseudo" /> (le pseudo doit contenir entre 3 et 15 caractères)<br />
-	<label for="password">* Mot de Passe :</label><input type="password" name="password" id="password" /><br />
-	<label for="confirm">* Confirmer le mot de passe :</label><input type="password" name="confirm" id="confirm" />
+    <div class="row">
+            <div class="col-sm-3">
+	<label for="pseudo">* Pseudo :</label>  
+            </div>
+            <div class="col-sm-9">
+            <input name="pseudo" type="text" id="pseudo" /> (le pseudo doit contenir entre 3 et 15 caractères)<br />
+            </div>
+    </div>
+    <div class="row">
+            <div class="col-sm-3">
+                <label for="password">* Mot de Passe :</label>
+            </div>
+            <div class="col-sm-9">
+                <input type="password" name="password" id="password" /><br />
+            </div> 
+    </div>
+    <div class="row">
+            <div class="col-sm-3"> 
+                <label for="confirm">* Confirmer le mot de passe :</label>
+                </div>
+            <div class="col-sm-9">
+                <input type="password" name="confirm" id="confirm" />
+            </div>
+    </div>
 	</fieldset>
 	<fieldset><legend>Contacts</legend>
-	<label for="email">* Votre adresse Mail :</label><input type="text" name="email" id="email" /><br />
-	<label for="facebook">Votre profil Facebook :</label><input type="text" name="facebook" id="facebook" /><br />
-	<label for="website">Votre site web :</label><input type="text" name="website" id="website" />
+    <div class="row">
+            <div class="col-sm-3">
+	            <label for="email">* Votre adresse Mail :</label>
+            </div>  
+            <div class="col-sm-9"> 
+                <input type="text" name="email" id="email" /><br />
+             </div>
+    </div>
+    <div class="row">
+            <div class="col-sm-3">
+                <label for="facebook">Votre profil Facebook :</label>
+            </div>   
+            <div class="col-sm-9">  
+                <input type="text" name="facebook" id="facebook" /><br />
+            </div>
+    </div>
+    <div class="row">
+            <div class="col-sm-3">
+	            <label for="website">Votre site web :</label>
+            </div>   
+            <div class="col-sm-9">      
+                <input type="text" name="website" id="website" />
+            </div>
+    </div>
 	</fieldset>
 	<fieldset><legend>Profil sur le forum</legend>
 	<label for="avatar">Choisissez votre avatar :</label><input type="file" name="avatar" id="avatar" />
-	<label for="signature">Signature :</label><textarea cols="40" rows="4" placeholder="Votre signature" name="signature" id="signature" ></textarea>
+	<div class="row">
+            <div class="col-sm-3">
+                <label for="signature">Signature :</label>
+            </div>   
+            <div class="col-sm-9"> 
+                <textarea cols="40" rows="4" placeholder="Votre signature" name="signature" id="signature" ></textarea>
+            </div>
+    </div>  
 	</fieldset>
 	<p>Les champs précédés d un * sont obligatoires</p>
 	<label>Se souvenir de moi ?</label><input type="checkbox" name="souvenir" /><br />	
