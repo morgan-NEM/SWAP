@@ -15,12 +15,13 @@ session_start();
           include('../forum/includes/functions.php')
     ?>
 </head>
-<body><?php
+<body>
+<?php
 if ($id!=0) erreur(ERR_IS_NOT_CO);
 
 if (empty($_POST['pseudo'])) // Si on la variable est vide, on peut considérer qu'on est sur la page de formulaire
 { ?>
-	<h1>Inscription</h1>;
+	<h1 class="centrer">Inscription</h1>
 	<form method="post" action="register.php" enctype="multipart/form-data">
 	<fieldset><legend>Identifiants</legend>
 	<label for="pseudo">* Pseudo :</label>  <input name="pseudo" type="text" id="pseudo" /> (le pseudo doit contenir entre 3 et 15 caractères)<br />
