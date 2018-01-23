@@ -43,8 +43,8 @@ if (!isset($_POST['identifiant'])) //On est dans la page de formulaire
 	<p>Cliquez <a href="./connexion.php">ici</a> pour revenir</p>';
     } else //On vérifie le mot de passe
     {
-        $query = $db->prepare('SELECT membre_mdp, membre_id, membre_rang, membre_pseudo
-        FROM forum_membres WHERE membre_pseudo = :pseudo');
+        $query = $db->prepare('SELECT mdp, ID, rang, pseudo
+        FROM utilisateurs WHERE pseudo = :pseudo');
         $query->bindValue(':pseudo', $_POST['identifiant'], PDO::PARAM_STR);
         $query->execute();
         $data = $query->fetch();
@@ -56,7 +56,7 @@ if (!isset($_POST['identifiant'])) //On est dans la page de formulaire
             $_SESSION['id'] = $data['membre_id'];
             $message = '<p>Bienvenue ' . $data['membre_pseudo'] . ',
 			vous êtes maintenant connecté!</p>
-			<p>Cliquez <a href="index.php">ici</a>
+			<p>Cliquez <a href="../vue/index.php">ici</a>
 			pour revenir à la page d accueil</p>';
         } else // Accès pas OK !
         {

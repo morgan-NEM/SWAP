@@ -121,7 +121,7 @@ $avatar_erreur3 = NULL;
  $confirm = md5($_POST['confirm']);
  
  //Vérification du pseudo
- $query=$db->prepare('SELECT COUNT(*) AS nbr FROM forum_membres WHERE membre_pseudo =:pseudo');
+ $query=$db->prepare('SELECT COUNT(*) AS nbr FROM utilisateurs WHERE pseudo =:pseudo');
  $query->bindValue(':pseudo',$pseudo, PDO::PARAM_STR);
  $query->execute();
  $pseudo_free=($query->fetchColumn()==0)?1:0;
@@ -148,7 +148,7 @@ $avatar_erreur3 = NULL;
  //Vérification de l'adresse email
 
     //Il faut que l'adresse email n'ait jamais été utilisée
-    $query=$db->prepare('SELECT COUNT(*) AS nbr FROM forum_membres WHERE membre_email =:mail');
+    $query=$db->prepare('SELECT COUNT(*) AS nbr FROM utilisateurs WHERE mail =:mail');
     $query->bindValue(':mail',$email, PDO::PARAM_STR);
     $query->execute();
     $mail_free=($query->fetchColumn()==0)?1:0;
@@ -176,7 +176,7 @@ if ($i==0)
 {
  echo'<h1>Inscription terminée</h1>';
      echo'<p>Bienvenue '.stripslashes(htmlspecialchars($_POST['pseudo'])).' vous êtes maintenant inscrit sur le forum</p>
- <p>Cliquez <a href="\Swappist\forum\index.php">ici</a> pour revenir à la page d accueil</p>';
+ <p>Cliquez <a href="\index.php">ici</a> pour revenir à la page d accueil</p>';
 echo $email. " ";
 echo $pseudo." ";
 echo $pass." ";
@@ -184,10 +184,9 @@ echo $signature;
      
  $nomavatar=(!empty($_FILES['avatar']['size']))?move_avatar($_FILES['avatar']):''; 
 
-     $query=$db->prepare('INSERT INTO forum_membres (membre_pseudo, membre_mdp, membre_email,             
-     membre_facebook, membre_siteweb, membre_avatar,
-     membre_signature, membre_localisation, membre_inscrit,   
-     membre_derniere_visite)
+     $query=$db->prepare('INSERT INTO utilisateurs (pseudo, mdp, mail,             
+     facebook, siteweb, avatar, signature, localisation, membre_inscrit,   
+     derniere_visite)
      VALUES (:pseudo, :pass, :email, :facebook, :website, :nomavatar, :signature, :localisation, :temps, :temps)');
  $query->execute(array(
      "pseudo"=>$pseudo,
