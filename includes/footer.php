@@ -2,7 +2,7 @@
 <section class="index-link">
 <div class="container">
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="link-area">
                 <h3>Réseaux sociaux :</h3>
                 <P>
@@ -13,7 +13,7 @@
             </P>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="link-area">
                 <h3>SWAPPIST</h3>
                 <ul>
@@ -24,7 +24,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="link-area">
                 <h3>PLUS D'INFOS</h3>
                 <ul>
@@ -35,17 +35,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="link-area">
-                <h3>PLAN DU SITE</h3>
-                <ul>
-                <li><a href="../vue/index.php"> Accueil</a></li>
-                <li><a href="#"> Services-1</a></li>
-                <li><a href="#"> Services-1</a></li>
-                <li><a href="mailto:chose@bidule.fr"> Contact</a></li>
-                </ul>
-            </div>
-        </div>
+        
     </div>
 </div>
 </section>
