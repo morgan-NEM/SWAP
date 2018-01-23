@@ -162,7 +162,7 @@ $avatar_erreur3 = NULL;
     //On vérifie la forme maintenant
     if (!preg_match("#^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$#", $email) || empty($email))
     {
-        $email_erreur2 = "Votre adresse E-Mail n'a pas un format correct.";
+        $email_erreur2 = "Votre adresse email n'a pas un format correct.";
         $i++;
     }
     //Vérification de la signature
@@ -187,7 +187,7 @@ echo $signature;
      $query=$db->prepare('INSERT INTO utilisateurs (pseudo, mdp, mail,             
      facebook, siteweb, avatar, signature, localisation, membre_inscrit,   
      derniere_visite)
-     VALUES (:pseudo, :pass, :email, :facebook, :website, :nomavatar, :signature, :localisation, :temps, :temps)');
+     VALUES (:pseudo, :pass, :email, :facebook, :website, :nomavatar, :masignature, :malocalisation, :temps, :temps)');
  $query->execute(array(
      "pseudo"=>$pseudo,
      "pass"=>$pass,
@@ -195,10 +195,11 @@ echo $signature;
      "facebook"=>$facebook,
      "website"=>$website,
      "nomavatar"=>$nomavatar,
-     "signature"=>$signature,
+     "masignature"=>$signature,
+     "malocalisation"=>$localisation,
      "temps"=>$temps,
      "temps"=>$temps
-));
+ ));
 
  //Et on définit les variables de sessions
      $_SESSION['pseudo'] = $pseudo;

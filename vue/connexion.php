@@ -16,8 +16,8 @@
 
 <h1 class="centrer">Connexion</h1>
 
-<?php print_r($id);
-if ($id != 0) {
+<?php 
+if ($_SESSION['id'] != 0) {
     erreur(ERR_IS_CO);
 }
 
