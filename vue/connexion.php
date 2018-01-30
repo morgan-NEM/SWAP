@@ -12,20 +12,17 @@
 <body>
 <div><?php include ('../includes/banner.php');
            include ('../includes/connexion_bdd.php');
-           include ('../includes/constants.php'); ?> </div>
+           include ('../includes/constants.php');
+           include ('../includes/functions.php') ?> </div>
 
 <h1 class="centrer">Connexion</h1>
 
 <?php 
-if (isset ($_SESSION['id']) ) {
-    erreur(ERR_IS_CO);
-}
+if ($id!=0) erreur(ERR_IS_CO);
 
-?>
-<?php
 if (!isset($_POST['identifiant'])) //On est dans la page de formulaire
 {?>
-<form method="post">
+<form method="post" action="connexion.php">
 
             <p class="centrer"><input type="text" name="identifiant" placeholder="Identifiant"></p>
             <p class="centrer"><input type="password" name="password" placeholder="Mot de passe"></p>
@@ -33,7 +30,9 @@ if (!isset($_POST['identifiant'])) //On est dans la page de formulaire
             <p class="centrer"><a href="./register.php">Pas encore inscrit ?</a></p>
 
 </form>
+
 <?php
+
 } else {
     $message = '';
     if (empty($_POST['identifiant']) || empty($_POST['password'])) // Si un champ a été oublié
@@ -43,16 +42,16 @@ if (!isset($_POST['identifiant'])) //On est dans la page de formulaire
 	<p>Cliquez <a href="./connexion.php">ici</a> pour revenir</p>';
     } else //On vérifie le mot de passe
     {
-        $query = $db->prepare('SELECT mdp, ID, rang, pseudo
+        $query = $db->prepare('SELECT mdp, ID, pseudo
         FROM utilisateurs WHERE pseudo = :pseudo');
         $query->bindValue(':pseudo', $_POST['identifiant'], PDO::PARAM_STR);
         $query->execute();
         $data = $query->fetch();
         if ($data['mdp'] == md5($_POST['password'])) // Accès OK !
         {
-            session_start();
+            //session_start();
             $_SESSION['pseudo'] = $data['pseudo'];        
-            $_SESSION['id'] = $data['id'];
+            $_SESSION['ID'] = $data['ID'];
             $message = '<p>Bienvenue ' . $data['pseudo'] . ',
 			vous êtes maintenant connecté!</p>
 			<p>Cliquez <a href="../vue/index.php">ici</a>
@@ -62,8 +61,8 @@ if (!isset($_POST['identifiant'])) //On est dans la page de formulaire
             $message = '<p>Une erreur s\'est produite
 	    pendant votre identification.<br /> Le mot de passe ou le pseudo
             entré n\'est pas correct.</p><p>Cliquez <a href="connexion.php">ici</a>
-	    pour revenir à la page précédente'
-	    ;
+        pour revenir à la page précédente';
+	    
         }
         $query->CloseCursor();
     }

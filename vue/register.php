@@ -175,30 +175,21 @@ $avatar_erreur3 = NULL;
 if ($i==0)
 {
  echo'<h1>Inscription terminée</h1>';
-     echo'<p>Bienvenue '.stripslashes(htmlspecialchars($_POST['pseudo'])).' vous êtes maintenant inscrit sur le forum</p>
- <p>Cliquez <a href="\index.php">ici</a> pour revenir à la page d accueil</p>';
-echo $email. " ";
-echo $pseudo." ";
-echo $pass." ";
-echo $signature;
+     echo'<p>Bienvenue '.stripslashes(htmlspecialchars($_POST['pseudo'])).' vous êtes maintenant inscrit</p>
+ <p>Cliquez <a href=".\index.php">ici</a> pour revenir à la page d accueil</p>';
      
  $nomavatar=(!empty($_FILES['avatar']['size']))?move_avatar($_FILES['avatar']):''; 
 
      $query=$db->prepare('INSERT INTO utilisateurs (pseudo, mdp, mail,             
-     facebook, siteweb, avatar, signature, localisation, membre_inscrit,   
-     derniere_visite)
-     VALUES (:pseudo, :pass, :email, :facebook, :website, :nomavatar, :masignature, :malocalisation, :temps, :temps)');
+     facebook, siteweb, avatar)
+     VALUES (:pseudo, :pass, :email, :facebook, :website, :nomavatar)');
  $query->execute(array(
      "pseudo"=>$pseudo,
      "pass"=>$pass,
      "email"=>$email,
      "facebook"=>$facebook,
      "website"=>$website,
-     "nomavatar"=>$nomavatar,
-     "masignature"=>$signature,
-     "malocalisation"=>$localisation,
-     "temps"=>$temps,
-     "temps"=>$temps
+     "nomavatar"=>$nomavatar
  ));
 
  //Et on définit les variables de sessions
