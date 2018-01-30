@@ -12,12 +12,12 @@
 <body>
 <div><?php include ('../includes/banner.php');
            include ('../includes/connexion_bdd.php');
-           include ('../forum/includes/constants.php'); ?> </div>
+           include ('../includes/constants.php'); ?> </div>
 
 <h1 class="centrer">Connexion</h1>
 
 <?php 
-if ($_SESSION['id'] != 0) {
+if (isset ($_SESSION['id']) ) {
     erreur(ERR_IS_CO);
 }
 
@@ -48,13 +48,12 @@ if (!isset($_POST['identifiant'])) //On est dans la page de formulaire
         $query->bindValue(':pseudo', $_POST['identifiant'], PDO::PARAM_STR);
         $query->execute();
         $data = $query->fetch();
-        if ($data['membre_mdp'] == md5($_POST['password'])) // Accès OK !
+        if ($data['mdp'] == md5($_POST['password'])) // Accès OK !
         {
             session_start();
-            $_SESSION['pseudo'] = $data['membre_pseudo'];
-            $_SESSION['level'] = $data['membre_rang'];
-            $_SESSION['id'] = $data['membre_id'];
-            $message = '<p>Bienvenue ' . $data['membre_pseudo'] . ',
+            $_SESSION['pseudo'] = $data['pseudo'];        
+            $_SESSION['id'] = $data['id'];
+            $message = '<p>Bienvenue ' . $data['pseudo'] . ',
 			vous êtes maintenant connecté!</p>
 			<p>Cliquez <a href="../vue/index.php">ici</a>
 			pour revenir à la page d accueil</p>';

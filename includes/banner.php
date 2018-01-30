@@ -5,10 +5,11 @@
     
         <nav class="container" >        
             <div class="row">
-                <div class="col-sm-1"></div>
-                <a type="button" class="btn btn-default col-sm-3" href="../vue/index.php">Accueil</a>
-                <a type="button" class="btn btn-default col-sm-3" href="../vue/produits.php">Swappez</a> 
-                <a type="button" class="btn btn-default col-sm-3" href="../vue/connexion.php">Connexion</a>
+                <div class="col-sm-2"></div>
+                <a type="button" class="btn btn-default col-sm-2" href="../vue/index.php">Accueil</a>
+                <a type="button" class="btn btn-default col-sm-2" href="../vue/page_ajout_objet.php">Swappez</a>
+                <a type="button" class="btn btn-default col-sm-2" href="../vue/produits.php">Produits</a> 
+                <a type="button" class="btn btn-default col-sm-2" href="../vue/connexion.php">Connexion</a>
                 <div class="col-sm-2"></div>
             </div>
         </nav>

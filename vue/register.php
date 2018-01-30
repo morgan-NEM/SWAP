@@ -12,7 +12,7 @@ session_start();
     <?php include('../includes/banner.php');
           include('../includes/connexion_bdd.php');
           include('../includes/constants.php');
-          include('../forum/includes/functions.php')
+          include('../includes/functions.php')
     ?>
 </head>
 <body>
